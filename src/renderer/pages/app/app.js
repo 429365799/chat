@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Route, Link } from 'react-router-dom'
 import { hot } from 'react-hot-loader'
 import autobind from 'autobind-decorator'
+
+// Components
+import Nav from '../../components/nav/nav';
+import Grid from '@material-ui/core/Grid';
 
 import './app.scss'
 
@@ -12,7 +15,6 @@ class App extends Component {
     }
 
     state = {
-        msg: '2'
     }
 
     async getList() {
@@ -24,14 +26,17 @@ class App extends Component {
     async componentDidMount() {
         await this.getList();
     }
-    
 
     render() {
         return (
             <div className="app">
-                1
-                <br/>
-                {this.state.msg}
+                <Grid spacing={ 0 } container>
+                    <Grid item xs={ 2 }>
+                        <Nav />
+                    </Grid>
+                    <Grid item xs={ 3 }></Grid>
+                    <Grid item xs={ 7 }></Grid>
+                </Grid>
             </div>
         )
     }

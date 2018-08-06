@@ -45,7 +45,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.s?css$/,
+                test: /\.(css|scss)$/,
                 include: resolve('.'),
                 use: [
                     'style-loader',
@@ -83,7 +83,7 @@ module.exports = {
                 ]
             },
             {
-                exclude: [/\.(js|jsx|mjs)$/, /\.s?css$/, /\.html$/, /\.json$/],
+                exclude: [/\.(js|jsx|mjs)$/, /\.(css|scss)$/, /\.html$/, /\.json$/],
                 loader: 'file-loader',
                 options: {
                     name: 'static/media/[name].[hash:8].[ext]',
@@ -103,4 +103,3 @@ module.exports = {
         
     ]
 }
-console.log(resolve('index.html'));
