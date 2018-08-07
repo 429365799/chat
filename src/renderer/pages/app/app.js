@@ -30,13 +30,10 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <Grid spacing={ 0 } container>
-                    <Grid item xs={ 2 }>
-                        <Nav />
-                    </Grid>
-                    <Grid item xs={ 3 }></Grid>
-                    <Grid item xs={ 7 }></Grid>
-                </Grid>
+                <Nav />
+                <main className="main-content">
+                    
+                </main>
             </div>
         )
     }

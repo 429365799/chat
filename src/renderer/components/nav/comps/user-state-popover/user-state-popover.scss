@@ -1,0 +1,55 @@
+.user-state-popover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    top: calc(100% + 10px);
+    right: 0;
+    transform: scale(1);
+    box-shadow: 0 5px 20px rgba(193, 193, 193, .7);
+    transition: all 200ms ease-out;
+    transform-origin: top;
+
+    &::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -100%);
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 20px 10px;
+        border-color: transparent transparent #ffffff transparent;
+    }
+
+    .status-label {
+        display: flex;
+        font-size: 12px;
+        line-height: 22px;
+        align-items: center;
+        cursor: pointer;
+
+        >i {
+            margin-right: 5px;
+        }
+    }
+}
+
+.user-state-popover-enter {
+    transform: scale(0);
+    opacity: 0;
+}
+.user-state-popover-enter-active {
+    transform: scale(1);
+    opacity: 1;
+}
+.user-state-popover-exit {
+    transform: scale(1);
+    opacity: 1;
+}
+.user-state-popover-exit-active {
+    transform: scale(0);
+    opacity: 0;
+}

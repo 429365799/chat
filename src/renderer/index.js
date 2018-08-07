@@ -4,8 +4,8 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import store, { history } from './store/store'
 
-// roboto-icon used by meterail-ui
-// import './assets/fonts/roboto/style.css'
+// icon font
+import './assets/fonts/iconfont/iconfont.css'
 
 import App from './pages/app/app'
 
