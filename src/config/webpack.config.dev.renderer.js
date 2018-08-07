@@ -15,7 +15,8 @@ module.exports = {
     // webpack dev server
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        hotOnly: true
     },
     entry: [
         'babel-polyfill',

@@ -4,7 +4,7 @@
     "description": "",
     "main": "src/main/index.js",
     "scripts": {
-        "start": "webpack-dev-server --hotOnly --config ./src/config/webpack.config.dev.renderer.js",
+        "start": "webpack-dev-server --config ./src/config/webpack.config.dev.renderer.js",
         "build": "webpack --mode prodection"
     },
     "keywords": [],
